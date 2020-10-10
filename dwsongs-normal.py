@@ -1632,6 +1632,6 @@ try:
 					pass
 except KeyboardInterrupt:
 	print("\nSTOPPING...")
-	sets.stop()
+	#sets.stop()
 	os.rmdir(loc_dir)
-	exit()
+	#exit()
