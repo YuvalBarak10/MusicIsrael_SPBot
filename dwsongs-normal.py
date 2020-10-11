@@ -1585,7 +1585,7 @@ try:
 	#ans = input("Choose: ")
 
 	while(1==1):
-		for a in comandss:
+		for a in comands:
 			sets.dispatcher.add_handler(
 				CommandHandler(a, menu)
 			)
@@ -1610,9 +1610,28 @@ try:
 
 		sets.start_polling()
 	else:
-		sets.start_polling()
+		KeyboardInterrupt()
 
 	print("Bot started")
 
+	while True:
+		sleep(1)
+		path = os.statvfs("/")
+		free_space = path.f_bavail * path.f_frsize
+
+		if (del1 <= del2 and is_audio == 0) or free_space <= limit:
+			del1 = 0
+			del2 = 0
+
+			for a in os.listdir(loc_dir):
+				try:
+					rmtree(loc_dir + a)
+				except NotADirectoryError:
+					os.remove(loc_dir + a)
+				except OSError:
+					pass
 except KeyboardInterrupt:
-	sets.start_polling()
+	print("\nSTOPPING...")
+	#sets.stop()
+	os.rmdir(loc_dir)
+	#exit()
