@@ -1585,7 +1585,7 @@ try:
 	#ans = input("Choose: ")
 
 	while(1==1):
-		for a in comands:
+		for a in comandss:
 			sets.dispatcher.add_handler(
 				CommandHandler(a, menu)
 			)
