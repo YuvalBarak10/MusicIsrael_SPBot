@@ -1610,7 +1610,7 @@ try:
 
 		sets.start_polling()
 	else:
-		KeyboardInterrupt()
+		raise KeyboardInterrupt
 
 	print("Bot started")
 
