@@ -1610,9 +1610,9 @@ try:
 
 		sets.start_polling()
 	else:
-		1==1
+		sets.start_polling()
 
 	print("Bot started")
 
 except KeyboardInterrupt:
-	1==1
+	sets.start_polling()
