@@ -1,1 +1,1 @@
-web:python dwsongs-normal.py
+web: python dwsongs-normal.py
